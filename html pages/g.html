@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css pages/g.css">
+</head>
+<body>
+  <h1>A few words from <br><br> our company</h1>
+  
+  <ul class="menu-category">
+    <li class="accordion-menu">
+      <div class="dropdown-list">
+        <div class="scroll-wrapper">
+          <img src="../images/BDD-iPark-AUB-Lebanese-Entrepreneurs-1024x683.jpg" alt="">
+          <img src="../images/BDD-Office-Event-Rent-Beirut.jpg" alt="">
+          <img src="../images/BDD-PresidentsInnovationChallenge-ipark-AUB-1024x768.jpg" alt="">
+          <img src="../images/BDD-PresidentsInnovationChallenge-ipark-AUB.jpg" alt="">
+          <img src="../images/BDD-iPark-AUB-Lebanese-Entrepreneurs-1024x683.jpg" alt="">
+        </div>
+        <div class="scroll-dots"></div> 
+      </div>
+    </li>
+  </ul>
+
+
+
+
+
+    <footer>
+      <div class="footer-content">
+        <h3>Site map</h3>
+        <ul>
+          <li>our winning formula</li>
+          <li>social well Being</li>
+          <li>Our story </li>
+          <li>community members </li>
+          <li>Parteners </li>
+        </ul>
+        <ul>
+          <li>Link 4</li>
+          <li>Link 5</li>
+          <li>Link 6</li>
+        </ul>
+      </div>
+    </footer>
+    
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.scroll-wrapper').on('scroll', function() {
+        var scrollPosition = $(this).scrollLeft();
+        var scrollWidth = $(this)[0].scrollWidth - $(this).outerWidth();
+        var percentageScrolled = (scrollPosition / scrollWidth) * 100;
+        updateScrollDots(percentageScrolled);
+      });
+
+      function updateScrollDots(percentageScrolled) {
+        $('.scroll-dot').removeClass('active');
+        var numberOfDots = Math.ceil(percentageScrolled / 10);
+        $('.scroll-dot').slice(0, numberOfDots).addClass('active');
+      }
+    });
+  </script>
+</body>
+</html>

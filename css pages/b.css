@@ -1,0 +1,53 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: whitesmoke;
+}
+
+.wrapper {
+  padding: 5px;
+  max-width: 960px;
+  width: 95%;
+  margin: 20px auto;
+}
+
+header {
+  padding: 0 15px;
+  text-align: center;
+  font-size: 21px;
+}
+
+.columns {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:flex-start; 
+  margin: 5px 0;
+}
+
+.column {
+  flex: 1;
+  border: 1px solid #666;
+  margin: 20px; 
+  padding: 10px;
+  background: white;
+  transition: 0.3s;
+}
+.icon {
+  text-align: center;
+}
+
+.icon img {
+  width: 50px; 
+  height: 50px; 
+}
+
+
+
+@media screen and (max-width:980px) {
+  .columns .column{
+    margin-bottom: 5px;
+    flex-basis: 40%;
+
+  }
+}
